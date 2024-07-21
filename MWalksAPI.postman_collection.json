@@ -1,0 +1,576 @@
+{
+	"info": {
+		"_postman_id": "592b4fc3-1bd0-4211-9fa2-6b08ca8b8514",
+		"name": "MWalksAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23502967"
+	},
+	"item": [
+		{
+			"name": "Regions",
+			"item": [
+				{
+					"name": "Get All Regions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dev}}/Regions",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"Regions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Region By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dev}}/Regions/:id",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"Regions",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "d1c9914b-05c3-4d7a-86ab-1b3c5827cbbc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Region",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "Region 5",
+									"type": "text"
+								},
+								{
+									"key": "Code",
+									"value": "Code 5",
+									"type": "text"
+								},
+								{
+									"key": "Image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dev}}/Regions/",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"Regions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Region",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "updated",
+									"type": "text"
+								},
+								{
+									"key": "Code",
+									"value": "SSS",
+									"type": "text"
+								},
+								{
+									"key": "Image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dev}}/Regions/:id",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"Regions",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "0526b796-30e5-419f-000f-08dca93462cf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Region",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{dev}}/Regions/:id",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"Regions",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "f98ad00f-8c34-4d52-b494-08dca8be408e"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Walks",
+			"item": [
+				{
+					"name": "Get All Walks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dev}}/Walks",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"Walks"
+							],
+							"query": [
+								{
+									"key": "filterOn",
+									"value": "name",
+									"disabled": true
+								},
+								{
+									"key": "filterQuery",
+									"value": "Track",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "lengthInKm",
+									"disabled": true
+								},
+								{
+									"key": "ascending",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Walk By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dev}}/Walks/:id",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"Walks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5d70d670-f633-4538-e843-08dca754a3e3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Walk",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Description",
+									"value": "some descriiption ",
+									"type": "text"
+								},
+								{
+									"key": "LengthInKm",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "Name",
+									"value": "Walk 2",
+									"type": "text"
+								},
+								{
+									"key": "Image",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "RegionId",
+									"value": "d1c9914b-05c3-4d7a-86ab-1b3c5827cbbc",
+									"type": "text"
+								},
+								{
+									"key": "DifficultyId",
+									"value": "9294e56f-6b1d-4784-b64c-ec86ad3a3f98",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dev}}/Walks/",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"Walks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Walk",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "Walk 2 update",
+									"type": "text"
+								},
+								{
+									"key": "Description",
+									"value": "some descriiption  update",
+									"type": "text"
+								},
+								{
+									"key": "LengthInKm",
+									"value": "9.2",
+									"type": "text"
+								},
+								{
+									"key": "RegionId",
+									"value": "b5fe1947-61de-43c1-6f70-08dca74aa70e",
+									"type": "text"
+								},
+								{
+									"key": "DifficultyId",
+									"value": "fdc29a29-09c9-4897-8c6d-bd62b2f9eab4",
+									"type": "text"
+								},
+								{
+									"key": "Image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dev}}/Walks/:id",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"Walks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9979925d-e33e-4b25-3266-08dca934bcfb"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Walk",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{dev}}/Walks/:id",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"Walks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "b5fe1947-61de-43c1-6f70-08dca74aa71e"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"reader@azwalks.com\",\r\n    \"password\": \"Password@101\",\r\n    \"roles\": [\r\n      \r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev}}/Auth/Register",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"Auth",
+								"Register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const token = pm.response.json().accessToken;\r",
+									"pm.collectionVariables.set(\"accessToken\" , token)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"writer@azwalks.com\",\r\n    \"password\": \"Password@101\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev}}/Auth/Login",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"Auth",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Images",
+			"item": [
+				{
+					"name": "Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Image",
+									"type": "file",
+									"src": "/C:/Users/PC/Downloads/with.gif"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dev}}/Images/upload",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"Images",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{dev}}/Images/remove/:id",
+							"host": [
+								"{{dev}}"
+							],
+							"path": [
+								"Images",
+								"remove",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "85949047-9bc6-4eff-91fb-c44b2f6599d1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{accessToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "dev",
+			"value": "https://localhost:7047/api",
+			"type": "string"
+		},
+		{
+			"key": "accessToken",
+			"value": ""
+		}
+	]
+}
