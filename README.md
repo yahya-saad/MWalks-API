@@ -22,8 +22,10 @@
 - **Options Pattern**: Configuration management.
 
 ## Models
+![Diagram](https://github.com/user-attachments/assets/b119d125-3947-4199-a366-3cc6d51b748b)
 
 ## Endpoints
+![mwalks](https://github.com/user-attachments/assets/11a5c3c2-6d04-407f-ae42-602aa82b9dc6)
 
 ## Getting Started
 
@@ -31,8 +33,7 @@
 
 - [.NET SDK](https://dotnet.microsoft.com/download/)
 - [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [Cloudinary Account](https://cloudinary.com/)
-
+  
 ### Installation
 
 1. **Clone the repository**
@@ -53,19 +54,13 @@
    - Update the connection string in `appsettings.json` to point to your database.
    - Run the migrations to set up the database schema.
      ```bash
+     dotnet ef migrations add InitialCreate
      dotnet ef database update
      ```
 
 4. **Configure appsetting.json**
 
-   - Add your jwtSettings , ConnectionString inside the `appsettings.json`.
-
-```json
-"ConnectionStrings": {
-  "Default": "Server=(localdb)\\ProjectModels;Database=NZWalks;Trusted_Connection=True;",
-  "Auth": "Server=(localdb)\\ProjectModels;Database=AuthDb;Trusted_Connection=True;"
-}
-```
+   - Add your jwtSettings inside the `appsettings.json`.
 
 ```json
   "Jwt": {
